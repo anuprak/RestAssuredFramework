@@ -2,6 +2,8 @@ package stepDefinitions;
 
 import static io.restassured.RestAssured.given;
 
+import java.io.IOException;
+
 import cucumber.Options.TestContext;
 import enums.Context;
 import io.cucumber.java.en.Given;
@@ -16,7 +18,7 @@ public class GivenStepDefinitions extends BaseSteps {
 	}
 
 	@Given("User has location data to upload")
-	public void user_has_location_data_to_upload() {
+	public void user_has_location_data_to_upload() throws IOException {
 
 		TestData data = new TestData();
 		Utils baseRequest = new Utils();
